@@ -1,5 +1,8 @@
 Python version- 3.6.7
+
+
 Requirements
+
 Libraries-
 1. Pillow
 2. Requests
