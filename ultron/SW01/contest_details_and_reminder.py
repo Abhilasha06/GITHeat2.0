@@ -121,12 +121,13 @@ for i in R:
 conn = http.client.HTTPSConnection("api.msg91.com")
 print("Enter the moblie no")
 mob=input()
+print("Reminder messages have been scheduled for all of the above contests with the following request ids")
 msg="Hey!%20The%20codeforces%20contest%20is%20about%20to%20start%20"
 for i in rem:
-    url="/api/sendhttp.php?campaign=&response=&afterminutes=&schtime="+i+"&flash=&unicode=&mobiles="+mob+"&authkey=278382AURbibyU5cea80f6&route=4&sender=TESTIN&message="+msg+"&country=91"
+    #replace '##################' in the next line by the api key generated after setting up an account on msg91
+    url="/api/sendhttp.php?campaign=&response=&afterminutes=&schtime="+i+"&flash=&unicode=&mobiles="+mob+"&authkey=####################&route=4&sender=TESTIN&message="+msg+"&country=91"
     conn.request("GET",url)
     res = conn.getresponse()
     data = res.read()
-    print(data.decode("utf-8"))
+    print(data.decode("utf-8")," Scheduled Time ",i)
 
-print("Reminder messages have been scheduled for the above contests")
