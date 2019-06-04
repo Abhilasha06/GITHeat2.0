@@ -9,13 +9,31 @@ abc=url+a
 response = requests.get(abc)
 json_response = response.json()
 repository = json_response['result'][0]
-name=f'{repository["firstName"]}'+" "+f'{repository["lastName"]}' 
-print("Name: ",name)
-print(f'Rank: {repository["rank"]}')  
-print(f'Rating: {repository["rating"]}') 
-print(f'City: {repository["city"]}') 
-print(f'Country: {repository["country"]}') 
-print(f'Organization: {repository["organization"]}')    
+try:
+    name=f'{repository["firstName"]}'+" "+f'{repository["lastName"]}' 
+    print("Name: ",name)
+except:
+    print("Name: Not available")
+try:
+    print(f'Rank: {repository["rank"]}') 
+except:
+    print("Rank: Not available")
+try:
+    print(f'Rating: {repository["rating"]}') 
+except:
+    print("Rating: Not available")
+try:
+    print(f'City: {repository["city"]}') 
+except:
+    print("City: Not available")
+try:
+    print(f'Country: {repository["country"]}') 
+except:
+    print("Country: Not available")
+try:
+    print(f'Organization: {repository["organization"]}')    
+except:
+    print("Organization: Not available")
       
 
 url=f'{repository["titlePhoto"]}'
