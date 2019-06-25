@@ -53,6 +53,6 @@ MONITORING THE SITE FOR GETTING NEW CONTESTS
 
 4.Run the code.
 
-#This code automaticaaly runs after every 3 hours and scrapes the content of the contest page of codeforces site and if there are any contest within those 3 hours reminder message is scheduled for those contests.
-#The first execution starts 3 hours after you run the code.
+#This code automatically scrapes the content of the contest page of codeforces site after every 3 hours and if there are any contest within those 3 hours a reminder message is scheduled for all those contests.
+#The first scraping of codeforces contests page starts 3 hours after you run the code.
 #Do not shut down python and make sure you have an active internet connection.
