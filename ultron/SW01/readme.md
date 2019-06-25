@@ -22,24 +22,37 @@ Subtask 1 (viewing user details)
 
 Subtask 2 (upcoming contest details and reminder)
 
+1.Open the code in the file contest_details_and_reminder.py
 
-1.Set up an account on msg91 and generate the APIkey.
+2.Set up an account on msg91 and generate the APIkey.
 
-2.Replace ############### in line no 128 in the file contests_details_and_reminder.py by the above generated APIkey.
+3.Replace ############### in line no 128 in the file contests_details_and_reminder.py by the above generated APIkey.
 
-3.Run the code in the file contests_details_and_reminder.py.
+4.Run the code in the file contests_details_and_reminder.py.
 
-4.The name, start time, length and phase of the recent upcoming contests on codeforces is displayed.
+5.The name, start time, length and phase of the recent upcoming contests on codeforces is displayed.
 
-5.To send reminder for the above contests enter the phone number and the reminder messages will be scheduled through msg91 API. The reminder mssages will be received on the given phone number 15 minutes before the start of the contest.
+6.To send reminder for the above contests enter the phone number and the reminder messages will be scheduled through msg91 API. The reminder mssages will be received on the given phone number 15 minutes before the start of the contest.
 
-6.The sceduled time and scheduled request ID for all these upcoming contests is displayed in the output.
+7.The sceduled time and scheduled request ID for all these upcoming contests is displayed in the output.
 
 #The service provided by msg91 is not free though initially you get 50 free credits (i.e. you can send 50 free messages)
-
-
 Screenshots
-
 This folder contains the screenshot of output, received reminder messages and delivery report of scheduled messages.
 
 
+
+
+MONITORING THE SITE FOR GETTING NEW CONTESTS
+
+1.Open the code in the file monitoring_site.py.
+
+2.Set up an acount on msg91 and generate the API key.
+
+3.Replace ######### in line no 73 by the moblie no on which the reminder meassage is to be sent and ############# in line no 83 by the generated API key.
+
+4.Run the code.
+
+#This code automaticaaly runs after every 3 hours and scrapes the content of the contest page of codeforces site and if there are any contest within those 3 hours reminder message is scheduled for those contests.
+#The first execution starts 3 hours after you run the code.
+#Do not shut down python and make sure you have an active internet connection.
