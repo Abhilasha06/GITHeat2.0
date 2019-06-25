@@ -69,7 +69,7 @@ def job_function():
     
     #using msg91 api to send message
     conn = http.client.HTTPSConnection("api.msg91.com")
-    #replace ########## in line no 71 with 10 digit mobile number
+    #replace ########## in line no 73 with 10 digit mobile number
     mob="##########"
     print("Reminder messages have been scheduled for these contests with the following request ids")
     msg="Hey!%20The%20codeforces%20contest%20is%20about%20to%20start%20"
@@ -78,7 +78,7 @@ def job_function():
     for i in rem:
         j = datetime.strptime(i, "%Y/%m/%d %H:%M:%S")
         
-        #replace '##################' in the next line by the api key generated after setting up an account on msg91
+        #replace '##################' in line no 83 by the api key generated after setting up an account on msg91
         if j>= a and j<=b:
             url="/api/sendhttp.php?campaign=&response=&afterminutes=&schtime="+i+"&flash=&unicode=&mobiles="+mob+"&authkey=####################&route=4&sender=TESTIN&message="+msg+"&country=91"        
             conn.request("GET",url)
